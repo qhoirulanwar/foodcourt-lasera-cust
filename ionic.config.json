@@ -1,0 +1,7 @@
+{
+  "name": "ta skripsi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
