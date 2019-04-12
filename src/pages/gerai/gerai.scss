@@ -1,0 +1,31 @@
+page-gerai {
+    img{
+        width:100%;
+        height:100%;
+      }
+      
+      .myCard{
+        position:relative;
+      
+      }
+      
+      .myOverlay{
+          width: 100%;
+          height: 60px;
+          position: absolute;
+          z-index: 99;
+        //   bottom: 0px;
+        //   opacity: 0.5;
+        //   background: #000;
+        //   color: #fff;
+      
+      }
+
+      .card-title{
+        padding-top: 10px;
+        padding-right: 15px;
+        color: #fff;
+        font-weight: 500;
+        text-align: right;
+      }
+}

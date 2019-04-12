@@ -1,0 +1,18 @@
+page-transaksi {
+    .item-md ion-thumbnail {
+        // min-width: 80px !important;
+        // min-height: 80px !important;
+    }
+    .item-md ion-thumbnail img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .item-md ion-thumbnail[item-start] {
+        margin-right: 12px !important;
+    }
+
+    .item-md ion-thumbnail {
+        min-width: 0px !important;
+        min-height: 0px !important;
+    }
+}

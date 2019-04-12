@@ -1,0 +1,46 @@
+<!--
+  Generated template for the GeraiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>Gerai Lasera</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card color="primary">
+        <ion-item  color="primary">
+        <!-- <button ion-button clear item-start color="light">Saldo</button> -->
+        <!-- <button ion-button clear item-end>{{ 20000 | currency:'Rp ':'code':'1.0-0' }}</button> -->
+        <ion-icon item-start name="custom-wallet"></ion-icon> <p item-start style="font-weight: 500; font-size: initial;">Saldo Lasera </p>
+        <p item-end style="font-weight: 500; font-size: initial;">{{ app.saldo | currency:'Rp ':'code':'1.0-0' }}</p>
+        </ion-item>
+    </ion-card>
+
+    <ion-grid style="padding: 0px !important;">
+      <ion-row>
+        <ion-col col-6 col-sm-4 col-lg-3 *ngFor="let data of listGerai" style="padding: 0px;">
+          <ion-card class="myCard" (click)="openKedaiMenu(data.gerai_id)" >
+              <div class="myOverlay">
+                  <div class="card-title">Gerai No {{ data.gerai_id }}</div>
+                  <!-- <div class="card-subtitle">72 Listings</div> -->
+              </div>
+            <img src="{{ data.imgUrl }}"/>
+            <ion-card-content>
+              {{ data.gerai_nama }}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

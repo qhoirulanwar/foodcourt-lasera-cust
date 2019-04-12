@@ -1,0 +1,63 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registrasi</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list >
+    <ion-item-divider color="orange">Informasi data Pengguna</ion-item-divider>
+
+    <ion-item>
+      <ion-label>Nama Lengkap</ion-label>
+      <ion-input type="text" [(ngModel)]="user.nama"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alamat Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>No Telp</ion-label>
+      <ion-input type="number" [(ngModel)]="user.telp"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tanggal Lahir</ion-label>
+      <ion-datetime 
+        displayFormat="DD MMM YYYY" 
+        [(ngModel)]="user.birth"
+        doneText="OK"
+        monthShortNames="Jan, Feb, Mar, Apr, Mei, Jun, Jul, Agu, Sep, Okt, Nov, Des"
+      >
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Jenis Kelamin</ion-label>
+      <ion-select [(ngModel)]="user.gender">
+        <ion-option value="male">Pria</ion-option>
+        <ion-option value="female">Wanita</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Kata sandi</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ulangi Kata sandi</ion-label>
+      <ion-input type="password" [(ngModel)]="user.confirmPassword"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div style="margin: 20px;">
+    <button ion-button block color="primary" (click)="signUp()">Sign Up</button>
+    <button ion-button block clear color="orange" mode="ios" (click)="loginPage()" style="font-weight: 500;">Sudah punya akun? Login</button>
+  </div>
+</ion-content>

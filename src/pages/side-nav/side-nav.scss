@@ -1,0 +1,24 @@
+page-side-nav {
+
+    .profile-picture {
+        border-radius: 100%;
+        overflow: hidden;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;	
+    }
+    .big-profile-picture {
+        margin: 0 auto;
+        margin-top: 20px;
+        // margin-bottom: 10px;
+        border: 5px solid #50597b;
+        width: 90px;
+        height: 90px;  
+    }
+    .small-profile-picture {
+        border: 2px solid #50597b;
+        width: 40px;
+        height: 40px;
+    }
+
+}

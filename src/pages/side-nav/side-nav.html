@@ -1,0 +1,63 @@
+<!--
+  Generated template for the SideNavPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-split-pane>
+  <ion-menu [content]="content">
+    <ion-header>
+
+      <ion-navbar color="orange">
+        <ion-title>Lasera Food Court</ion-title>
+      </ion-navbar>
+
+    </ion-header>
+
+
+    <ion-content>
+
+        <div class="profile-picture big-profile-picture clear">
+            <img src="../../assets/imgs/profildp.png" width="150px">
+          </div>
+        
+          <div style="text-align: center; margin-bottom: 25px;">
+            <h2 style="margin-top: 10px;">{{ app.dataProfil.nama }}</h2 >
+            <p style="margin-top: -10px;">{{ app.dataProfil.email }}</p>
+            <p style="margin-top: -10px; font-weight: 500;">{{ app.dataProfil.telp }}</p>
+          </div>
+
+          <ion-list>
+            <button ion-item (click)="openPageRoot('GeraiPage')" style="margin-top: 10px;">
+              <div style="padding-bottom: 10px;">
+                Beranda
+              </div>
+            </button>
+            <button ion-item (click)="openPage('TransaksiPage', 'proses')" style="margin-top: 10px;">
+              <div style="padding-bottom: 10px;">
+                Menunggu Pesanan
+              </div>
+            </button>
+            <button ion-item (click)="openPage('TransaksiPage', 'riwayat')" style="margin-top: 10px;">
+              <div style="padding-bottom: 10px;">
+                Riwayat Pesanan
+              </div>
+            </button>
+            <!-- <button ion-item (click)="logout()" style="margin-top: 10px;">
+              Logout
+            </button> -->
+          </ion-list>
+        
+          
+    </ion-content>
+
+    <ion-footer>
+      <ion-toolbar >
+        <button ion-button outline full color="danger" (click)="logout()" style="border-left-width: 1px; border-right-width: 1px;">Logout</button>
+      </ion-toolbar>
+    </ion-footer>
+
+  </ion-menu>
+
+  <ion-nav main [root]="homePage" swipeBackEnabled="false" #content></ion-nav>
+</ion-split-pane>
